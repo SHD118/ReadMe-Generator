@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-
+var temp;
 // create an command line application that dunamically generates a professional ReadMe
 
 // requirements
@@ -45,8 +45,64 @@ const promptUser = () => {
         {
             type: 'input',
             // table of content
-            name: 'questions',
-            message: 'Please add any questions'
+            name: 'email',
+            message: 'Please add email link'
+        },
+        {
+            type: 'input',
+            // table of content
+            name: 'github',
+            message: 'Please add github link'
+        },
+        {
+            type: 'input',
+            // table of content
+            name: 'Link',
+            message: 'Please add deployable link'
         },
     ])
 }
+
+const dataForHTML = ({name , description, tOC, installation, usage, tests, questions}) =>
+`# ${name}
+<a name="descsection"></a>
+## Description
+${description}  
+## Table of Contents
+1. [ Description. ](#descsection)
+2. [ Installation. ](#installsection)
+3. [ Usage. ](#usagesection)
+4. [ License. ](#licensesection)
+5. [ Contributing. ](#contribsection)
+6. [ Tests. ](#testsection)
+7. [ Questions. ](#questionssection)
+<a name="installsection"></a>
+## Installation
+${installation}
+<a name="usagesection"></a>
+## Usage
+${usage}
+<a name="licensesection"></a>
+## License
+  <a name="contribsection"></a>
+## Contributing
+  
+  <a name="testsection"></a>
+## Tests
+  ${tests}
+  <a name="questionssection"></a>
+## Questions?
+    Want to learn more please contact me at ${email}
+ `;
+
+
+const init = () => {
+    promptUser()
+    // Use writeFileSync method to use promises instead of a callback function
+      .then((name) => fs.writeFileSync('index.html', dataForHTML(name)))
+      .then(() => console.log('Successfully wrote to index.html'))
+      .catch((err) => console.error(err));
+  };
+  
+  init();
+
