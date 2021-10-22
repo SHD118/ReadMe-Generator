@@ -20,12 +20,17 @@ const promptUser = () => {
             name: 'description',
             message: 'Please add a description'
         },
-
         {
             type: 'input',
-            name: 'tOC',
-            message: 'Please add a table of content'
+            name: 'userName',
+            message: 'Please your first and last name'
         },
+
+        // {
+        //     type: 'input',
+        //     name: 'tOC',
+        //     message: 'Please add a table of content'
+        // },
         {
             type: 'input',
             name: 'installation',
@@ -34,64 +39,60 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'usage',
-            message: 'Please add detail on the usage detail'
+            message: 'Please add detail on the usage'
         },
         {
             type: 'input',
-            // table of content
+            name: 'license',
+            message: 'Please add detail on the license'
+        },
+        {
+            type: 'input',
             name: 'test',
             message: 'Please add any testing information'
         },
         {
             type: 'input',
-            // table of content
             name: 'email',
             message: 'Please add email link'
         },
         {
             type: 'input',
-            // table of content
             name: 'github',
             message: 'Please add github link'
         },
-        {
-            type: 'input',
-            // table of content
-            name: 'Link',
-            message: 'Please add deployable link'
-        },
+
     ])
 }
 
-const dataForHTML = ({name , description, tOC, installation, usage, tests, questions}) =>
+const dataForHTML = ({name , description, userName, installation, usage, license, tests, email, github }) =>
 `# ${name}
-<a name="descsection"></a>
+### ${userName}
+<a name="description"></a>
 ## Description
 ${description}  
 ## Table of Contents
-1. [ Description. ](#descsection)
-2. [ Installation. ](#installsection)
-3. [ Usage. ](#usagesection)
-4. [ License. ](#licensesection)
-5. [ Contributing. ](#contribsection)
+1. [ Description. ](#description)
+2. [ Installation. ](#installation)
+3. [ Usage. ](#usage)
+4. [ License. ](#license)
 6. [ Tests. ](#testsection)
-7. [ Questions. ](#questionssection)
+7. [ Questions. ](#questions)
 <a name="installsection"></a>
 ## Installation
 ${installation}
-<a name="usagesection"></a>
+<a name="usage"></a>
 ## Usage
 ${usage}
-<a name="licensesection"></a>
+<a name="license"></a>
 ## License
-  <a name="contribsection"></a>
-## Contributing
-  
-  <a name="testsection"></a>
+${license}
+<a name="tests"></a>
 ## Tests
   ${tests}
-  <a name="questionssection"></a>
+  <a name="questions"></a>
 ## Questions?
+    Want to see more of my work? [Click here!](https://github.com/${github})
     Want to learn more please contact me at ${email}
  `;
 
@@ -99,7 +100,7 @@ ${usage}
 const init = () => {
     promptUser()
     // Use writeFileSync method to use promises instead of a callback function
-      .then((name) => fs.writeFileSync('index.html', dataForHTML(name)))
+      .then((userInput) => fs.writeFileSync('index.html', dataForHTML(userInput)))
       .then(() => console.log('Successfully wrote to index.html'))
       .catch((err) => console.error(err));
   };
