@@ -32,6 +32,12 @@ const promptUser = () => {
         //     message: 'Please add a table of content'
         // },
         {
+            type: 'list',
+            choices: ["BSD 2-Clause License", "BSD 3-Clause License", "Apache 2.0 License"], 
+            name: 'badge',
+            message: 'Please pick a license'
+        },
+        {
             type: 'input',
             name: 'installation',
             message: 'Please at installation instructions'
@@ -91,7 +97,18 @@ ${license}
     Want to learn more please contact me at ${email}
  `;
 
-
+function renderBadge(answers) {
+    // ["BSD 2-Clause License", "BSD 3-Clause License", "Apache 2.0 License"]
+    if (answers.badge === "BSD 2-Clause License") {
+        return "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)"
+    }
+    if (answers.badge === "Apache 2.0 License") {
+        return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    }
+    if (answers.badge === "BSD 3-Clause License") {
+        return "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+    }
+}
 const init = () => {
     promptUser()
     // Use writeFileSync method to use promises instead of a callback function
