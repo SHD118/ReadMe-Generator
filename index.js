@@ -92,7 +92,7 @@ ${usage}
 * ${renderBadge(badge)}
 
 ## Tests
-  ${tests}
+  ${test}
 ## Questions?
     Want to see more of my work? [Click here!](https://github.com/${github})
     Want to learn more please contact me at ${email}
