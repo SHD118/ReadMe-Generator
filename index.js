@@ -71,7 +71,7 @@ const promptUser = () => {
     ])
 }
 
-const dataForHTML = ({name , description, userName, installation, usage, license, badge, tests, email, github }) =>
+const dataForHTML = ({name , description, userName, installation, usage, license, badge, test, email, github }) =>
 `# ${name}
 ### ${userName}
 ## Description
