@@ -88,8 +88,8 @@ ${installation}
 ## Usage
 ${usage}
 ## License
-${license}
-${renderBadge(badge)}
+* ${license}
+* ${renderBadge(badge)}
 
 ## Tests
   ${tests}
