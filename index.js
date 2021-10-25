@@ -54,7 +54,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'test',
+            name: 'tests',
             message: 'Please add any testing information'
         },
         {
@@ -71,7 +71,7 @@ const promptUser = () => {
     ])
 }
 
-const dataForHTML = ({name , description, userName, installation, usage, license, badge, test, email, github }) =>
+const dataForHTML = ({name , description, userName, installation, usage, license, badge, tests, email, github }) =>
 `# ${name}
 ### ${userName}
 ## Description
@@ -88,11 +88,11 @@ ${installation}
 ## Usage
 ${usage}
 ## License
-* ${license}
-* ${renderBadge(badge)}
+${license}
+${renderBadge(badge)}
 
 ## Tests
-  ${test}
+  ${tests}
 ## Questions?
     Want to see more of my work? [Click here!](https://github.com/${github})
     Want to learn more please contact me at ${email}
