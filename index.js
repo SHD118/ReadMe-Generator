@@ -68,7 +68,6 @@ const promptUser = () => {
 const dataForHTML = ({name , description, userName, installation, usage, license, tests, email, github }) =>
 `# ${name}
 ### ${userName}
-<a name="description"></a>
 ## Description
 ${description}  
 ## Table of Contents
@@ -76,21 +75,17 @@ ${description}
 2. [ Installation. ](#installation)
 3. [ Usage. ](#usage)
 4. [ License. ](#license)
-6. [ Tests. ](#testsection)
+6. [ Tests. ](#tests)
 7. [ Questions. ](#questions)
-<a name="installsection"></a>
 ## Installation
 ${installation}
-<a name="usage"></a>
 ## Usage
 ${usage}
-<a name="license"></a>
 ## License
 ${license}
-<a name="tests"></a>
+
 ## Tests
   ${tests}
-  <a name="questions"></a>
 ## Questions?
     Want to see more of my work? [Click here!](https://github.com/${github})
     Want to learn more please contact me at ${email}
@@ -100,8 +95,8 @@ ${license}
 const init = () => {
     promptUser()
     // Use writeFileSync method to use promises instead of a callback function
-      .then((userInput) => fs.writeFileSync('index.html', dataForHTML(userInput)))
-      .then(() => console.log('Successfully wrote to index.html'))
+      .then((userInput) => fs.writeFileSync('README.md', dataForHTML(userInput)))
+      .then(() => console.log('Successfully wrote to README.MD'))
       .catch((err) => console.error(err));
   };
   
