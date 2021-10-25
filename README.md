@@ -20,6 +20,6 @@ fqreq
 ## Tests
   fgvreqw4
 ## Questions?
-    Want to see more of my work? [Click here!](https://github.com/q)
-    Want to learn more please contact me at regqe
+Want to see more of my work? [Click here!](https://github.com/q)
+Want to learn more please contact me at regqe
  

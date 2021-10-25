@@ -94,8 +94,8 @@ ${usage}
 ## Tests
   ${tests}
 ## Questions?
-    Want to see more of my work? [Github Link].(https://github.com/${github})
-    Want to learn more please contact me at ${email}
+Want to see more of my work? [Github Link](https://github.com/${github})
+Want to learn more please contact me at ${email}
  `;
 
 function renderBadge(answers) {
