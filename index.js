@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-var temp;
+
 // create an command line application that dunamically generates a professional ReadMe
 
 // requirements
@@ -26,14 +26,9 @@ const promptUser = () => {
             message: 'Please your first and last name'
         },
 
-        // {
-        //     type: 'input',
-        //     name: 'tOC',
-        //     message: 'Please add a table of content'
-        // },
         {
             type: 'list',
-            choices: ["BSD 2-Clause License", "BSD 3-Clause License", "Apache 2.0 License"], 
+            choices: ["BSD 2-Clause License", "BSD 3-Clause License", "Apache 2.0 License", "none"], 
             name: 'badge',
             message: 'Please pick a license'
         },
@@ -88,13 +83,19 @@ ${installation}
 ## Usage
 ${usage}
 ## License
-* ${license}
-* ${renderBadge(badge)}
+${license}
+
+<br>
+
+${renderBadge(badge)}
 
 ## Tests
   ${tests}
 ## Questions?
 Want to see more of my work? [Github Link](https://github.com/${github})
+
+<br/>
+
 Want to learn more please contact me at ${email}
  `;
 
@@ -108,6 +109,9 @@ function renderBadge(answers) {
     }
     if (answers === "BSD 3-Clause License") {
         return "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+    }
+    if (answers === "none") {
+        return "";
     }
 }
 const init = () => {
