@@ -62,11 +62,16 @@ const promptUser = () => {
             name: 'github',
             message: 'Please add github link'
         },
+        {
+            type: 'input',
+            name: 'contribution',
+            message: 'Please add any resources used'
+        },
 
     ])
 }
 
-const dataForHTML = ({name , description, userName, installation, usage, license, badge, tests, email, github }) =>
+const dataForHTML = ({name , description, userName, installation, usage, license, badge, tests, email, github, contribution }) =>
 `# ${name}
 ### ${userName}
 ## Description
@@ -81,6 +86,7 @@ ${renderBadge(badge)}
 4. [ License. ](#license)
 6. [ Tests. ](#tests)
 7. [ Questions. ](#questions)
+7. [ Resources/Credit. ](#resources/credit)
 ## Installation
 ${installation}
 ## Usage
@@ -90,11 +96,13 @@ ${license}
 ## Tests
   ${tests}
 ## Questions?
-
 Want to see more of my work? [Github Link](https://github.com/${github})
 <br/>
 Want to learn more please contact me at ${email}
- `;
+## Resources/Credit
+${contribution}
+
+`;
 
 function renderBadge(answers) {
     // ["BSD 2-Clause License", "BSD 3-Clause License", "Apache 2.0 License"]

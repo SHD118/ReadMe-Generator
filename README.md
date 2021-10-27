@@ -12,6 +12,7 @@ The purpose of this project was to develop a ReadMe.md through the command line.
 4. [ License. ](#license)
 6. [ Tests. ](#tests)
 7. [ Questions. ](#questions)
+7. [ Resources/Credit. ](#resources/credit)
 ## Installation
 N/A
 ## Usage
@@ -21,8 +22,9 @@ Free Use
 ## Tests
   N/A
 ## Questions?
-
 Want to see more of my work? [Github Link](https://github.com/https://github.com/SHD118/ReadMe-Generator)
 <br/>
 Want to learn more please contact me at shdesai118@gmail.com
- 
+## Resources/Credit
+https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+
