@@ -1,8 +1,9 @@
-# Rds
-### re
+# ReadMe Generator
+### Siddharth Desai
 ## Description
-sddd
+The purpose of this project was to develop a ReadMe.md through the command line. The project leverages technologies such as node.js javascript, inquirer and the file system library. The user is prompted with questions and the answers are stored and later used in generating the ReadMd.md file
 <br/>
+
 [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 ## Table of Contents
 1. [ Description. ](#description)
@@ -12,16 +13,16 @@ sddd
 6. [ Tests. ](#tests)
 7. [ Questions. ](#questions)
 ## Installation
-dsfsd
+N/A
 ## Usage
-dfasf
+N/A
 ## License
-asd
+Free Use
 ## Tests
-  sadf
+  N/A
 ## Questions?
 
-Want to see more of my work? [Github Link](https://github.com/)
+Want to see more of my work? [Github Link](https://github.com/https://github.com/SHD118/ReadMe-Generator)
 <br/>
-Want to learn more please contact me at das
+Want to learn more please contact me at shdesai118@gmail.com
  

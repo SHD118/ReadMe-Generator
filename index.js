@@ -72,6 +72,7 @@ const dataForHTML = ({name , description, userName, installation, usage, license
 ## Description
 ${description}
 <br/>
+
 ${renderBadge(badge)}
 ## Table of Contents
 1. [ Description. ](#description)
