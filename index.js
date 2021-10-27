@@ -70,7 +70,9 @@ const dataForHTML = ({name , description, userName, installation, usage, license
 `# ${name}
 ### ${userName}
 ## Description
-${description}  
+${description}
+<br/>
+${renderBadge(badge)}
 ## Table of Contents
 1. [ Description. ](#description)
 2. [ Installation. ](#installation)
@@ -84,18 +86,12 @@ ${installation}
 ${usage}
 ## License
 ${license}
-
-<br>
-
-${renderBadge(badge)}
-
 ## Tests
   ${tests}
 ## Questions?
+
 Want to see more of my work? [Github Link](https://github.com/${github})
-
 <br/>
-
 Want to learn more please contact me at ${email}
  `;
 
