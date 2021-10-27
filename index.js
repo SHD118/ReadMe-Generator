@@ -86,7 +86,7 @@ ${renderBadge(badge)}
 4. [ License. ](#license)
 6. [ Tests. ](#tests)
 7. [ Questions. ](#questions)
-7. [ Resources/Credit. ](#resources/credit)
+7. [ Resources. ](#resources)
 ## Installation
 ${installation}
 ## Usage
@@ -99,7 +99,7 @@ ${license}
 Want to see more of my work? [Github Link](https://github.com/${github})
 <br/>
 Want to learn more please contact me at ${email}
-## Resources/Credit
+## Resources
 ${contribution}
 
 `;
